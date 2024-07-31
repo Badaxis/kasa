@@ -1,0 +1,28 @@
+.card {
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+
+  img {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+.card-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  padding: 20px;
+}
+
+@media (max-width: 1439.98px) {
+  .card img {
+    width: 335px;
+    height: 255px;
+  }
+}
