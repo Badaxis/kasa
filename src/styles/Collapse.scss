@@ -1,0 +1,35 @@
+@use "index.scss";
+
+.collapse-btn {
+  background-color: index.$red-theme;
+  height: 52px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.arrow-button {
+  cursor: pointer;
+
+  &.inverted {
+    rotate: 180deg;
+  }
+}
+
+.collapse-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.collapse-content {
+  background-color: rgba(index.$grey-background, 0.45);
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px;
+  overflow: hidden;
+  transition: height 0.4s ease-out;
+}

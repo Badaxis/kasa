@@ -1,0 +1,21 @@
+@use "index.scss";
+
+.tag {
+  background-color: index.$red-theme;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 95px;
+  height: 25px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+
+  @media (max-width: index.$mo-break) {
+    min-width: 64px;
+    height: 18px;
+    font-size: 10px;
+  }
+}

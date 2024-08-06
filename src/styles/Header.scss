@@ -1,3 +1,5 @@
+@use "index.scss";
+
 header {
   display: flex;
   justify-content: space-between;
@@ -17,7 +19,7 @@ header {
   text-decoration: underline;
 }
 
-@media (max-width: 705px) {
+@media (max-width: index.$mo-break) {
   header {
     margin: 20px 20px 0;
 

@@ -9,12 +9,13 @@ function Home() {
     <main>
       <div className="home-banner-ctn">
         <Banner srcUrl={HomeBanner} altText="Bord de mer montagneux" />
-        <span className="home-banner-text">Chez vous, partout et ailleurs</span>
+        <h1 className="home-banner-text">Chez vous, partout et ailleurs</h1>
       </div>
       <div className="card-gallery">
         {Logements.map((logement) => (
           <Card
             key={logement.id}
+            linkId={logement.id}
             cover={logement.cover}
             title={logement.title}
           />

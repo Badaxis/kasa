@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
 	margin: 0;
 }
@@ -5,9 +7,21 @@
 $red-theme: #FF6060;
 $grey-background: #F6F6F6;
 $shadow: 0 4px 4px rgba(black, 0.25);
+$mo-break: 1439.98px;
 
-body {
+#root {
 	font-family: "Montserrat", sans-serif;
 	background-color: white;
-	min-width: 330px;
+	min-width: 340px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	margin: 50px 100px;
+
+	@media (max-width: $mo-break) {
+		margin: 27px 20px;
+	}
 }

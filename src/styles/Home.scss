@@ -1,19 +1,15 @@
 @use "index.scss";
 
-main {
-  margin: 50px 100px;
-}
-
 .home-banner-ctn {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 43px;
-}
 
-.banner-img {
-  box-shadow: index.$shadow;
-  filter: brightness(40%);
+  .banner-img {
+    box-shadow: index.$shadow;
+    filter: brightness(40%);
+  }
 }
 
 .home-banner-text {
@@ -38,10 +34,4 @@ main {
   column-gap: 60px;
   justify-items: center;
   padding: 50px;
-}
-
-@media (max-width: 1439.98px) {
-  main {
-    margin: 27px 20px;
-  }
 }
