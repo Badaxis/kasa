@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Error from "./pages/Error";
 import About from "./pages/About";
 import Housing from "./pages/Housing";
-import "./styles/index.scss";
+import "./index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
