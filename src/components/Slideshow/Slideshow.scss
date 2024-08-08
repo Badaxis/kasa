@@ -1,3 +1,5 @@
+@use "../../index.scss";
+
 .slideshow-ctn {
   height: 415px;
   overflow: hidden;
@@ -29,14 +31,16 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
 
-  .previous {
-    width: 79px;
+.slide-arrow {
+  width: 79px;
+
+  &.previous {
     rotate: -90deg;
   }
 
-  .next {
-    width: 79px;
+  &.next {
     rotate: 90deg;
   }
 }
@@ -49,4 +53,42 @@
   color: white;
   font-size: 18px;
   font-weight: 500;
+}
+
+@media (max-width: index.$tb-break) {
+  .slideshow-ctn {
+    height: 335px;
+  }
+
+  .slide {
+    border-radius: 18px;
+  }
+
+  .slide-arrow {
+    width: 50px;
+  }
+
+  .slide-tracker {
+    bottom: 18px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: index.$mo-break) {
+  .slideshow-ctn {
+    height: 255px;
+  }
+
+  .slide {
+    border-radius: 10px;
+  }
+
+  .slide-arrow {
+    width: 20px;
+  }
+
+  .slide-tracker {
+    bottom: 10px;
+    font-size: 14px;
+  }
 }

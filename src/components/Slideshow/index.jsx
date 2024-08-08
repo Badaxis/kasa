@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Arrow from "../../assets/arrow-up.svg";
-import "../../styles/Slideshow.scss";
+import "./Slideshow.scss";
 
 function Slideshow({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,13 +29,13 @@ function Slideshow({ slides }) {
             <img
               src={Arrow}
               alt="Previous arrow"
-              className="previous"
+              className="slide-arrow previous"
               onClick={previousSlide}
             />
             <img
               src={Arrow}
               alt="Next arrow"
-              className="next"
+              className="slide-arrow next"
               onClick={nextSlide}
             />
           </div>

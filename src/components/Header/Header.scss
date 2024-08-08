@@ -1,4 +1,4 @@
-@use "index.scss";
+@use "../../index.scss";
 
 header {
   display: flex;
@@ -17,6 +17,20 @@ header {
 
 .header-nav-active {
   text-decoration: underline;
+}
+
+@media (max-width: index.$tb-break) {
+  header {
+    margin: 35px 50px 0;
+
+    nav a {
+      font-size: 18px;
+    }
+  }
+
+  .logo-header {
+    width: 178px;
+  }
 }
 
 @media (max-width: index.$mo-break) {

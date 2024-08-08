@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Arrow from "../../assets/arrow-up.svg";
-import "../../styles/Collapse.scss";
+import "./Collapse.scss";
 
 function Collapse({ title, content }) {
   const contentRef = useRef(null);
@@ -28,9 +28,8 @@ function Collapse({ title, content }) {
       <div
         style={{
           height: isOpen ? contentHeight : 0,
-          display: isOpen ? "block" : "none",
         }}
-        className="collapse-content"
+        className={`collapse-content ${isOpen ? "open" : ""}`}
       >
         <div ref={contentRef}>{content}</div>
       </div>

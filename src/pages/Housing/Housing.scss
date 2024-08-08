@@ -1,0 +1,138 @@
+@use "../../index.scss";
+
+.housing-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 24px;
+}
+
+.info-left,
+.info-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.housing-title {
+  color: index.$red-theme;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.housing-location {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.host {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.host-name {
+  color: index.$red-theme;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.host-picture {
+  height: 64px;
+  border-radius: 100%;
+}
+
+.housing-collapses {
+  display: flex;
+  gap: 76px;
+
+  .collapse {
+    width: 50%;
+  }
+
+  .equipements {
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+@media (max-width: index.$tb-break) {
+  .housing-title {
+    font-size: 24px;
+  }
+
+  .housing-location {
+    font-size: 16px;
+  }
+
+  .host-name {
+    font-size: 15px;
+  }
+
+  .host-picture {
+    height: 48px;
+  }
+
+  .rating img {
+    height: 24px;
+  }
+
+  .housing-collapses {
+    gap: 38px;
+  }
+}
+
+@media (max-width: index.$mo-break) {
+  .housing-info {
+    flex-direction: column;
+    margin: 15px 0 13px;
+    gap: 16px;
+  }
+
+  .info-left {
+    gap: 10px;
+  }
+
+  .info-right {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .housing-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .housing-location {
+    font-size: 14px;
+  }
+
+  .host-name {
+    font-size: 12px;
+  }
+
+  .host-picture {
+    height: 32px;
+  }
+
+  .rating img {
+    height: 18px;
+  }
+
+  .housing-collapses {
+    flex-direction: column;
+    gap: 20px;
+
+    .collapse {
+      width: 100%;
+    }
+  }
+}

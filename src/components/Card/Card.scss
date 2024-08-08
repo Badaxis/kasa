@@ -1,4 +1,4 @@
-@use "index.scss";
+@use "../../index.scss";
 
 .card {
   text-decoration: none;
@@ -26,5 +26,9 @@
   .card img {
     width: 335px;
     height: 255px;
+  }
+
+  .card-title {
+    padding: 15px 20px;
   }
 }

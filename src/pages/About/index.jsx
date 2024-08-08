@@ -1,7 +1,7 @@
-import AboutBanner from "../../assets/about-banner.png";
+import AboutBanner from "../../assets/about-banner.webp";
 import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
-import "../../styles/About.scss";
+import "./About.scss";
 
 function About() {
   return (

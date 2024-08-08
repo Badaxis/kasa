@@ -1,7 +1,7 @@
 import Banner from "../../components/Banner";
-import HomeBanner from "../../assets/home-banner.png";
+import HomeBanner from "../../assets/home-banner.webp";
 import Logements from "../../data/logements.json";
-import "../../styles/Home.scss";
+import "./Home.scss";
 import Card from "../../components/Card";
 
 function Home() {

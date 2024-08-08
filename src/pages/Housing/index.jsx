@@ -5,7 +5,7 @@ import Tag from "../../components/Tag";
 import Logements from "../../data/logements.json";
 import StarActive from "../../assets/star-active.png";
 import StarInactive from "../../assets/star-inactive.png";
-import "../../styles/Housing.scss";
+import "./Housing.scss";
 
 function Housing() {
   const housingId = useParams();
@@ -34,7 +34,7 @@ function Housing() {
     <main>
       <Slideshow slides={currentHousing.pictures} />
       <div className="housing-info">
-        <div className="info-ctn">
+        <div className="info-left">
           <div>
             <h1 className="housing-title">{currentHousing.title}</h1>
             <h2 className="housing-location">{currentHousing.location}</h2>
@@ -45,7 +45,7 @@ function Housing() {
             ))}
           </div>
         </div>
-        <div className="info-ctn">
+        <div className="info-right">
           <figure className="host">
             <figcaption className="host-name">
               {hostNames[0]}
