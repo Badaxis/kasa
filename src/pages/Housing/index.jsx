@@ -3,8 +3,7 @@ import Collapse from "../../components/Collapse";
 import Slideshow from "../../components/Slideshow";
 import Tag from "../../components/Tag";
 import Logements from "../../data/logements.json";
-import StarActive from "../../assets/star-active.png";
-import StarInactive from "../../assets/star-inactive.png";
+import Rating from "../../components/Rating";
 import "./Housing.scss";
 
 function Housing() {
@@ -17,18 +16,6 @@ function Housing() {
   }
 
   const hostNames = currentHousing.host.name.split(" ");
-  const rating = () => {
-    const redStars = [];
-    const greyStars = [];
-    for (let i = 0; i < currentHousing.rating; i++) {
-      redStars.push(<img key={i} src={StarActive} alt="Star" />);
-    }
-    for (let i = 0; i < 5 - currentHousing.rating; i++) {
-      greyStars.push(<img key={5 - i} src={StarInactive} alt="No star" />);
-    }
-    const stars = [...redStars, ...greyStars];
-    return stars;
-  };
 
   return (
     <main>
@@ -41,7 +28,7 @@ function Housing() {
           </div>
           <div className="tags">
             {currentHousing.tags.map((tag, index) => (
-              <Tag key={index} title={tag} />
+              <Tag key={index}>{tag}</Tag>
             ))}
           </div>
         </div>
@@ -58,21 +45,20 @@ function Housing() {
               alt="Avatar de l'hôte"
             />
           </figure>
-          <div className="rating">{rating()}</div>
+          <Rating rate={currentHousing.rating} />
         </div>
       </div>
       <div className="housing-collapses">
-        <Collapse title="Description" content={currentHousing.description} />
-        <Collapse
-          title="Équipements"
-          content={
+        <Collapse title="Description">{currentHousing.description}</Collapse>
+        <Collapse title="Équipements">
+          {
             <ul className="equipements">
               {currentHousing.equipments.map((equipement, index) => (
                 <li key={index}>{equipement}</li>
               ))}
             </ul>
           }
-        />
+        </Collapse>
       </div>
     </main>
   );

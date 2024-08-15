@@ -1,18 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Arrow from "../../assets/arrow-up.svg";
 import "./Collapse.scss";
 
-function Collapse({ title, content }) {
+function Collapse({ title, children }) {
   const contentRef = useRef(null);
-  const [contentHeight, setContentHeight] = useState(0);
+  const contentHeight = contentRef.current?.scrollHeight;
   const [isOpen, setIsOpen] = useState(false);
   const toggleIsOpen = () => {
     setIsOpen(!isOpen);
   };
-
-  useEffect(() => {
-    setContentHeight(contentRef.current.scrollHeight);
-  }, [isOpen]);
 
   return (
     <div className="collapse">
@@ -26,12 +22,14 @@ function Collapse({ title, content }) {
         />
       </div>
       <div
+        className="collapse-content-ctn"
         style={{
           height: isOpen ? contentHeight : 0,
         }}
-        className={`collapse-content ${isOpen ? "open" : ""}`}
       >
-        <div ref={contentRef}>{content}</div>
+        <div ref={contentRef} className="collapse-content">
+          {children}
+        </div>
       </div>
     </div>
   );

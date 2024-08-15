@@ -1,29 +1,8 @@
 @use "../../index.scss";
 
-.home-banner-ctn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 43px;
-  position: relative;
-
-  .banner-img {
-    box-shadow: index.$shadow;
-    filter: brightness(40%);
-  }
-}
-
-.home-banner-text {
-  position: absolute;
-  color: white;
-  font-size: 48px;
-  font-weight: 700;
-  text-shadow:
-    index.$shadow,
-    1px 1px 0 black,
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black;
+.home .banner-img {
+  box-shadow: index.$shadow;
+  filter: brightness(40%);
 }
 
 .card-gallery {
@@ -38,10 +17,6 @@
 }
 
 @media (max-width: index.$tb-break) {
-  .home-banner-text {
-    font-size: 36px;
-  }
-
   .card-gallery {
     display: flex;
     flex-direction: column;
@@ -51,20 +26,8 @@
 }
 
 @media (max-width: index.$mo-break) {
-  .home-banner-ctn {
-    margin-bottom: 22px;
-    justify-content: flex-start;
-
-    .banner-img {
-      box-shadow: none;
-    }
-  }
-
-  .home-banner-text {
-    font-size: 24px;
-    width: 225px;
-    margin-left: 16px;
-    text-shadow: none;
+  .banner-img {
+    box-shadow: none;
   }
 
   .card-gallery {

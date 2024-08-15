@@ -1,0 +1,11 @@
+@use "../../index.scss";
+
+.rating img {
+  @media (max-width: index.$tb-break) {
+    height: 24px;
+  }
+
+  @media (max-width: index.$mo-break) {
+    height: 18px;
+  }
+}

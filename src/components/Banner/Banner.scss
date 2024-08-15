@@ -1,17 +1,59 @@
 @use "../../index.scss";
 
+.banner-ctn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow:
+    index.$shadow,
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black;
+}
+
 .banner-img {
   height: 223px;
   width: 100%;
   object-fit: cover;
   border-radius: 25px;
+}
 
-  @media (max-width: index.$tb-break) {
+@media (max-width: index.$tb-break) {
+  .banner-text {
+    font-size: 36px;
+  }
+
+  .banner-img {
     height: 187px;
     border-radius: 18px;
   }
+}
 
-  @media (max-width: index.$mo-break) {
+@media (max-width: index.$mo-break) {
+  .banner-ctn {
+    margin-bottom: 22px;
+    justify-content: flex-start;
+  }
+
+  .banner-text {
+    font-size: 24px;
+    width: 225px;
+    margin-left: 16px;
+    text-shadow: none;
+  }
+
+  .banner-img {
     height: 111px;
     border-radius: 10px;
   }

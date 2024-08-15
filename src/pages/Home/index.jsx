@@ -6,19 +6,15 @@ import Card from "../../components/Card";
 
 function Home() {
   return (
-    <main>
-      <div className="home-banner-ctn">
-        <Banner srcUrl={HomeBanner} altText="Bord de mer montagneux" />
-        <h1 className="home-banner-text">Chez vous, partout et ailleurs</h1>
-      </div>
+    <main className="home">
+      <Banner srcUrl={HomeBanner} altText="Bord de mer montagneux">
+        Chez vous, partout et ailleurs
+      </Banner>
       <div className="card-gallery">
         {Logements.map((logement) => (
-          <Card
-            key={logement.id}
-            linkId={logement.id}
-            cover={logement.cover}
-            title={logement.title}
-          />
+          <Card key={logement.id} linkId={logement.id} cover={logement.cover}>
+            {logement.title}
+          </Card>
         ))}
       </div>
     </main>

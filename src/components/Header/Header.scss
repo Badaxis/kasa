@@ -12,11 +12,11 @@ header {
     margin-left: 57px;
     text-decoration: none;
     color: black;
-  }
-}
 
-.header-nav-active {
-  text-decoration: underline;
+    &.active {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media (max-width: index.$tb-break) {

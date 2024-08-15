@@ -24,19 +24,17 @@
   color: white;
 }
 
+.collapse-content-ctn {
+  overflow: hidden;
+  transition: height 0.4s ease-out;
+}
+
 .collapse-content {
   background-color: rgba(index.$grey-background, 0.45);
   border-radius: 5px;
   font-size: 18px;
   font-weight: 400;
   padding: 20px;
-  overflow: hidden;
-  display: none;
-  transition: height 0.4s ease-out;
-
-  &.open {
-    display: block;
-  }
 }
 
 @media (max-width: index.$tb-break) {

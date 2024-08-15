@@ -1,10 +1,9 @@
 @use "../../index.scss";
 
-.about-ctn {
+.about {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 38px;
 
   .banner-img {
     filter: brightness(70%);
@@ -16,22 +15,12 @@
   flex-direction: column;
   gap: 30px;
   width: 82%;
-}
 
-@media (max-width: index.$tb-break) {
-
-  .about-ctn,
-  .collapses-ctn {
-    gap: 29px;
-  }
-}
-
-@media (max-width: index.$mo-break) {
-  .about-ctn {
-    gap: 19px;
+  @media (max-width: index.$tb-break) {
+    gap: 25px;
   }
 
-  .collapses-ctn {
+  @media (max-width: index.$mo-break) {
     gap: 19px;
     width: 100%;
   }

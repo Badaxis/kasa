@@ -1,7 +1,7 @@
 import "./Tag.scss";
 
-function Tag({ title }) {
-  return <div className="tag">{title}</div>;
+function Tag({ children }) {
+  return <div className="tag">{children}</div>;
 }
 
 export default Tag;
